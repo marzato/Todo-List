@@ -9,6 +9,13 @@ const Body = props => {
 			setTodoList([currentWord, ...todoList]);
 		}
 	};
+	const deleteTask = index => {
+		setTodoList(
+			todoList.filter((currentWord, i) => {
+				return i != index;
+			})
+		);
+	};
 	return (
 		<>
 			<div className="Title">
@@ -31,10 +38,8 @@ const Body = props => {
 								<button
 									id={index}
 									type="button"
-									onClick={event => {
-										console.log(event.target.id);
-									}}>
-									Borrar
+									onClick={() => deleteTask(index)}>
+									x
 								</button>
 							</div>
 						);

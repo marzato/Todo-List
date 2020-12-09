@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Body = props => {
+const Body = () => {
 	const [currentWord, setCurrentWord] = useState("");
 	const [todoList, setTodoList] = useState([]);
 	const addTodoList = event => {
@@ -31,19 +31,19 @@ const Body = props => {
 				/>
 
 				<div className="List">
-					{todoList.map((item, index) => {
-						return (
-							<div key={index}>
-								{item}
-								<button
-									id={index}
+					<ul>
+						{todoList.map((item, index) => {
+							return (
+								<li
+									key={index}
 									type="button"
 									onClick={() => deleteTask(index)}>
-									x
-								</button>
-							</div>
-						);
-					})}
+									{item}
+									<div>x</div>
+								</li>
+							);
+						})}
+					</ul>
 				</div>
 				<div className="item">
 					<h3>items restante: {todoList.length} </h3>

@@ -18,6 +18,24 @@ body{
     background-color: pink;
 }
 
-.title{
-    
+ul{
+    border: 1px  solid rgb(36, 36, 34);
+    border-bottom: none;
+    list-style: none;
+    padding: 0;
+   
+} 
+ul > li{
+    border-bottom: 1px solid rgb(31, 28, 28);
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul > li > div {
+  display: flex;
+  justify-content: flex-end;
+  
+ 
+
 }

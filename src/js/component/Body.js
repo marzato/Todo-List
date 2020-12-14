@@ -46,7 +46,7 @@ const Body = () => {
 					</ul>
 				</div>
 				<div className="item">
-					<h3>items restante: {todoList.length} </h3>
+					<h3>Tareas restante: {todoList.length} </h3>
 				</div>
 			</div>
 		</>
